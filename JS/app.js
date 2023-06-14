@@ -80,7 +80,7 @@ Employee.prototype.renderEmployee = function() {
     employeeCard.appendChild(department);
 
     let level = document.createElement("h2");
-    department.textContent = "Level : " + this.level;
+    level.textContent = "Level : " + this.level;
     employeeCard.appendChild(level);
 
     console.log(allEmployee);
