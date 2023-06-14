@@ -1,24 +1,10 @@
-header {
-    height: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #55a5d4;
-    padding: 20px;
-    margin: auto;
-}
-
-header a {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 20px;
-}
-
 nav{
     display: flex;
     background-color: #3f95ce;
     width:1450px;
     height: 80px;
+    padding: auto;
+    margin:auto;
     
 }
 nav a{
@@ -59,6 +45,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center; 
+    margin:auto;
 }
 
 
@@ -66,11 +53,10 @@ body {
 #form {
     border: 0.5px solid rgb(109, 186, 113);
     border-radius: 10px;
-    width:fit-content;
+    width:max-content;
     height:auto;
-    padding: 20px;
+    padding:15px;
     background-color: rgb(89, 219, 82);
-    margin-bottom: 10px;
     margin: auto;
 }
 
@@ -81,10 +67,8 @@ div {
     height:fit-content;
     display: flex;
     flex-direction:column;
-    padding: 5px;
+    padding:auto;
     background-color: antiquewhite;
-    margin-bottom: 25px;
-    box-shadow: gray 1px 1px 10px;
     margin:auto;
 
 }
@@ -100,8 +84,8 @@ footer {
     justify-self:baseline;
     background-color: #3f95ce;
     color: #ffffff;
-    padding: 5px;
-    
+    padding:auto;
+    margin:auto;
     bottom: 0;
     width: 100%;
     

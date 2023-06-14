@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/accounting.css">
     <title>HR Management System</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -15,15 +19,49 @@
     </header>
 
     <main>
+        <table id="table">
+            <tr>
+                <th></th>
+                <th>Administration</th>
+                <th>Finance</th>
+                <th>Marketing</th>
+                <th>Development</th>
+            </tr>
+            <tr>
+                <th>Number of Employee</th>
+                <th id="administrationNum"></th>
+                <th id="financeNum"></th>
+                <th id="marketingNum"></th>
+                <th id="developmentNum"></th>
+            </tr>
+            <tr>
+                <th>Avareg Salary</th>
+                <th id="administrationAvg"></th>
+                <th id="financeAvg"></th>
+                <th id="marketingAvg"></th>
+                <th id="developmentAvg"></th>
+            </tr>
+            <tr>
+                <th>Total Salary</th>
+                <th id="administrationTotal"></th>
+                <th id="financeTotal"></th>
+                <th id="marketingTotal"></th>
+                <th id="developmentTotal"></th>
+            </tr>
+
+        </table>
 
     </main>
 
     <footer>
-        <h2>&copy;</h2>
+        <h2>&copy; 2023 HR Management System</h2>
         <a href="facebook.com">Facebook</a>
         <a href="twitter.com">Twitter</a>
         <a href="instagram.com">Instagram</a>
+
     </footer>
 
+    <script src="./JS/accounting.js"></script>
 </body>
+
 </html>

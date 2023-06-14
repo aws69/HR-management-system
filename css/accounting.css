@@ -1,0 +1,87 @@
+nav{
+    display: flex;
+    background-color: #3f95ce;
+    width:1450px;
+    height: 80px;
+    padding: auto;
+    margin:auto;
+}
+nav a{
+    font-size:x-large;
+    margin-left: 400px;
+    position:relative;
+    align-self: center;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration:double;
+}
+
+nav a:link {
+    color: red;
+}
+  
+nav a:visited {
+    color: rgb(253, 253, 253);
+}
+nav a:hover {
+    color: hotpink;
+}
+nav a:active {
+    color: rgb(0, 255, 8);
+}
+
+
+
+
+
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Add some spacing to elements */
+  body {
+    font-family: Arial, sans-serif;
+    margin:auto;
+  }
+  
+  h1, h2 {
+    margin-bottom: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .table-footer {
+    font-weight: bold;
+  }
+  
+  /* Add some spacing to the accounting page elements */
+  #departmentTable {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  
+  /* Add additional styles for the accounting page */
+
+  footer {
+    
+    display: flex;
+    flex-direction: column;
+    justify-self:baseline;
+    background-color: #3f95ce;
+    color: #ffffff;
+    padding:auto;
+    margin:auto;
+    
+    bottom: 0;
+    width: 1450px;
+    
+}
