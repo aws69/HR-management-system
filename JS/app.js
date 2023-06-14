@@ -99,6 +99,13 @@ document.getElementById("form").addEventListener("submit" , function(event){
     let newEmployee = new Employee(employeeId,fullName,department,level,img);
     newEmployee.renderEmployee();
 
+    const empData = {
+        fullname: fullName,
+        department: department,
+        level: level,
+        imgurl: imgurl
+    };
+    localStorage.setItem('newEmpData', JSON.stringify(empData));
     
 });
 
