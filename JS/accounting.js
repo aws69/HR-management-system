@@ -1,64 +1,46 @@
-'use strict'
+'use strict';
 
-let tableEle = document.getElementById("table");
-
-let allEmployee = [];
-
-function Employee(fullName, department, level) {
-    this.fullName = fullName;
-    this.department = department;
-    this.level = level;
-    this.salary = 0;
-    allEmployee.push(this);
-}
-
-Employee.prototype.generateRandomNum = function (min, max) {
-
-    this.salary = Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-Employee.prototype.randomSalary = function () {
-    for (let i = 0; i < allEmployee.length; i++) {
-        if (allEmployee[i].level === "Senior") {
-            allEmployee[i].generateRandomNum(1500, 2000);
-        } else if (allEmployee[i].level === "Mid-Senior") {
-            allEmployee[i].generateRandomNum(1000, 1500);
-        } else if (allEmployee[i].level === "Junior") {
-            allEmployee[i].generateRandomNum(500, 1000);
-        }
+function getData() {
+    let info = localStorage.getItem('Employees');
+    let employees = JSON.parse(info);
+  
+    let departmentData = {};
+  
+    employees.forEach(employee => {
+      let department = employee.departmentName;
+      if (departmentData.hasOwnProperty(department)) {
+        departmentData[department].count++;
+        departmentData[department].totalSalary += employee.salary;
+      } else {
+        departmentData[department] = {
+          count: 1,
+          totalSalary: employee.salary
+        };
+      }
+    });
+  
+    for (let department in departmentData) {
+      let countCell = document.getElementById(`${department}Cell`);
+      countCell.textContent = departmentData[department].count;
+  
+      let salaryCell = document.getElementById(`${department}Salary`);
+      salaryCell.textContent = departmentData[department].totalSalary;
+  
+      let averageCell = document.getElementById(`${department}Average`);
+      averageCell.textContent =
+        departmentData[department].totalSalary / departmentData[department].count;
     }
-    var taxPercent = 7.5;
-    return this.salary - (this.salary * (taxPercent / 100));
-}
-
-
-
-function getdata() {
-
-    let get = localStorage.getItem('info');
-    let objArr = JSON.parse(get);
-    for (let i = 0; i < objArr.length; i++) {
-        new Employee(objArr[i].full_Name, objArr[i].department, objArr[i].level, objArr[i].salary);
-    }
-}
-getdata();
-
-let arrNum = new Array(4); for (let i=0; i<4; ++i) arrNum[i] = 0;
-for (let i=0 ; i<allEmployee.length;++i){
-    if(allEmployee[i].department=="Administration") ++arrNum[0];
-    else if(allEmployee[i].department=="Development") ++arrNum[1];
-    else if (allEmployee[i].department=="Marketing") ++arrNum[2];
-    else if (allEmployee[i].department=="Finance") ++arrNum[3];
-}
-
-let administrationNum=document.getElementById("administrationNum");
-  administrationNum.textContent=arrNum[0];
-  let financeNum=document.getElementById("financeNum");
-  financeNum.textContent=arrNum[1];
-  let marketingNum=document.getElementById("marketingNum");
-  marketingNum.textContent=arrNum[2];
-  let developmentNum=document.getElementById("developmentNum");
-  developmentNum.textContent=arrNum[3];
-    
- 
-
+  
+    let totalEmployeesCell = document.getElementById("allCell");
+    let totalSalaryCell = document.getElementById("allSalary");
+    let averageSalaryCell = document.getElementById("allAverage");
+  
+    let totalEmployees = employees.length;
+    let totalSalary = employees.reduce((total, employee) => total + employee.salary, 0);
+    let averageSalary = totalSalary / totalEmployees;
+  
+    totalEmployeesCell.textContent = totalEmployees;
+    totalSalaryCell.textContent = totalSalary;
+    averageSalaryCell.textContent = averageSalary;
+  }
+getData();

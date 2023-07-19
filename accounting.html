@@ -19,36 +19,49 @@
     </header>
 
     <main>
-        <table id="table">
-            <tr>
-                <th></th>
-                <th>Administration</th>
-                <th>Finance</th>
-                <th>Marketing</th>
-                <th>Development</th>
-            </tr>
-            <tr>
-                <th>Number of Employee</th>
-                <th id="administrationNum"></th>
-                <th id="financeNum"></th>
-                <th id="marketingNum"></th>
-                <th id="developmentNum"></th>
-            </tr>
-            <tr>
-                <th>Avareg Salary</th>
-                <th id="administrationAvg"></th>
-                <th id="financeAvg"></th>
-                <th id="marketingAvg"></th>
-                <th id="developmentAvg"></th>
-            </tr>
-            <tr>
-                <th>Total Salary</th>
-                <th id="administrationTotal"></th>
-                <th id="financeTotal"></th>
-                <th id="marketingTotal"></th>
-                <th id="developmentTotal"></th>
-            </tr>
-
+        <table id="table1">
+            <thead>
+                <tr>
+                    <th>Department Name</th>
+                    <th>Number of Employees</th>
+                    <th>Total Salary</th>
+                    <th>Average Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Administration</td>
+                    <td id="AdministrationCell">0</td>
+                    <td id="AdministrationSalary">0</td>
+                    <td id="AdministrationAverage">0</td>
+                </tr>
+                <tr>
+                    <td>Marketing</td>
+                    <td id="MarketingCell">0</td>
+                    <td id="MarketingSalary">0</td>
+                    <td id="MarketingAverage">0</td>
+                </tr>
+                <tr>
+                    <td>Development</td>
+                    <td id="DevelopmentCell">0</td>
+                    <td id="DevelopmentSalary">0</td>
+                    <td id="DevelopmentAverage">0</td>
+                </tr>
+                <tr>
+                    <td>Finance</td>
+                    <td id="FinanceCell">0</td>
+                    <td id="FinanceSalary">0</td>
+                    <td id="FinanceAverage">0</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td> All Departments</td>
+                    <td id="allCell">0</td>
+                    <td id="allSalary">0</td>
+                    <td id="allAverage">0</td>
+                </tr>
+            </tfoot>
         </table>
 
     </main>
