@@ -20,38 +20,31 @@
 
     <main>
         <section class="tittle">
-        <h1>HR Management System</h1>
+            <h1>HR Management System</h1>
         </section>
 
-        <form id="form">
-            <label for="fullName">Full name:</label>
-            <input type="text" id="fullName" value=""><br>
-
-            <label for="department">Chose your Department: </label>
-            <select name="deplist" id="department">
+        <form id="form1">
+            <label for="fname">Full Name:</label>
+            <input type="text" id="fname" value="" placeholder="Enter Name" /> <br>
+            <label for="departments">Select your department:</label>
+            <select id="departments">
                 <option value="Administration">Administration</option>
                 <option value="Marketing">Marketing</option>
-                <option value="Development">Development</option>
+                <option value="Development" selected="default">Development</option>
                 <option value="Finance">Finance</option>
-            </select><br>
-
-            <label for="level">Chose your Level: </label>
-            <select name="levelList" id="level">
+            </select> <br>
+            <label for="levels">Select your level:</label>
+            <select id="levels">
                 <option value="Junior">Junior</option>
                 <option value="Mid-Senior">Mid-Senior</option>
-                <option value="Senior">Senior</option>
-            </select><br>
-
-            <label for="imgurl">Insert your Image: </label>
-            <input type="text" id="imgurl" value=""><br>
-
-            <input type="submit" value="Submit">
+                <option value="Senior" selected="default">Senior</option>
+            </select> <br>
+            <label for="img">Insert Image:</label>
+            <input type="text" id="img" value="" placeholder="Insert your Image" /> <br>
+            <button type="submit" id="button1"> Submit</button>
         </form>
-
-        <section id="employeeList">
-
-        </section>
-
+        <div id="div1"></div>
+        <script src="./JS/app.js"></script>
     </main>
 
 
@@ -63,7 +56,7 @@
     </footer>
 
     <script src="JS/app.js"></script>
-    
+
 
 </body>
 
